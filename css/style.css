@@ -1,0 +1,347 @@
+/* Стилі для заголовка */
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  height: 40px;
+}
+
+.search-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .search-container input[type="text"] {
+      margin-right: 10px;
+    }
+
+    .round-button {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      line-height: 40px;
+      cursor: pointer;
+    }
+
+    .round-button.left-button {
+      margin-right: 10px;
+    }
+	
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+submenu {
+  display: none;
+}
+
+has-submenu:hover .submenu {
+  display: block;
+}
+
+nav img {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+/* Стилі для таблиці з продуктами */
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 250px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.item h3 {
+  margin-top: 10px;
+  color: #333;
+}
+
+.item p {
+  margin-top: auto;
+  color: #ff9900;
+  font-weight: bold;
+}
+
+.item button {
+
+  color: #fff;
+  background-color: #ff9900;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+/* Стилі для нижньої панелі з посиланнями */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+footer ul li:last-child {
+  margin-right: 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer span {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+footer span:before {
+  content: "© ";
+}
+
+footer span:after {
+  content: " Всі права захищені. Адреса: вул. Назва вулиці, м. Назва міста, країна.";
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Modal */
+.modal {
+  display: none; /* за замовчуванням модальне вікно буде приховане */
+  position: fixed; /* фіксована позиція */
+  z-index: 1; /* рівень наложення - найвищий */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0); /* колір тла */
+  background-color: rgba(0, 0, 0, 0.4); /* колір тла з прозорістю */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe; /* колір тла вікна */
+  margin: 15% auto; /* 15% відступ зверху і знизу та автоматичне центрування горизонтально */
+  border: 1px solid #888;
+  width: 40%; /* ширина вікна */
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Container */
+.container {
+  padding: 16px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+/* Input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Login button */
+button[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  opacity: 0.8;
+}
+
+/* Cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.cancelbtn:hover {
+  opacity: 0.8;
+}
+
+
+/* Register */
+span.register {
+  float: right;
+  padding-left: 100px;
+  padding-top: 16px;
+}
+
+/* Forgot password */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.modal#addWindow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal#addWindow .modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal#addWindow .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal#addWindow h2 {
+  margin-top: 0;
+}
+
+.modal#addWindow form {
+  margin-top: 20px;
+}
+
+.modal#addWindow label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal#addWindow input[type="text"],
+.modal#addWindow input[type="number"],
+.modal#addWindow textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: vertical;
+}
+
+.modal#addWindow button[type="submit"],
+.modal#addWindow button[type="button"] {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius
+}
+
+

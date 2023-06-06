@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+
+    <title>Назва сайту</title>
+  </head>
+  <header>
+      <img src="resources\logo.png">
+      <nav>
+        <ul>
+          <li><a href="#">Головна</a></li>
+          <li><a href="#">Про нас</a></li>
+          <li><a href="#">Контакти</a></li>
+        </ul>
+      </nav>
+    </header>
+	<script src="script/autsite.js"></script>
+	
+	 <!-- Пошук -->
+  <div class="search-container" >
+    <div class="round-button left-button">+</div>
+    <input type="text" placeholder="Пошук..." name="search">
+    <button type="submit">Пошук</button>
+  </div>
+  <script src="script/STT.js"></script>
+  
+  <body>
+    <!-- Секція з таблицею продуктів -->
+	<section>
+	  <div class="item-container">
+	  </div>
+	</section>
+	<script src="script/table.js"></script>
+
+
+    
+    <!-- Нижня панель з посиланнями -->
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </nav>
+    </footer>
+	<!-- Модальне вікно реєстрації -->
+	<div id="id_register" class="modal" style="display:none;">
+	  <!-- Контент -->
+	  <form class="modal-content animate" id = "registration-form" >
+
+		<div class="container">
+		  <h1>Реєстрація </h1>
+		  <hr>
+			  <label for="usernameL"><b>Логін</b></label>
+			  <input type="text" placeholder="Введіть логін" name="username" required>
+
+			  <label for="emailL"><b>Пошта</b></label>
+			  <input type="text" placeholder="Введіть пошту" name="email" required>
+
+			  <label for="passwordL"><b>Пароль</b></label>
+			  <input type="password" placeholder="Введіть пароль" name="password" required>
+
+			  <label for="password_repeatL"><b>Повторіть пароль</b></label>
+			  <input type="password" placeholder="Повторіть пароль" name="password_repeat" required>
+			
+		  <p>Створюючи обліковий запис, ви погоджуєтеся з нашими <a href="TaP.html" style="color:dodgerblue">Умовами та положеннями про конфіденційність</a>.</p>
+
+		  <div class="clearfix">
+			<button type="button" onclick="document.getElementById('id_register').style.display='none'" class="cancelbtn">Скасувати</button>
+			<button type="submit" class="signupbtn">Зареєструватися</button>
+		  </div>
+		  
+		</div>
+	  </form>
+	</div>
+  <script src="script/registrations.js"></script>
+  
+  <!--Модальне вікно Авторизації-->
+	<div id="id_login" class="modal" style="display:none;">
+	  <!-- Modal Content -->
+	  <form class="modal-content animate" id = "authorization-form">
+		<div class="container">
+		  <label for="username"><b>Логін</b></label>
+		  <input type="text" placeholder="Введіть логін" name="username" required>
+
+		  <label for="password"><b>Пароль</b></label>
+		  <input type="password" placeholder="Введіть пароль" name="password" required>
+
+		  <button type="submit">Увійти</button>
+		</div>
+		<div class="container" style="background-color:#f1f1f1">
+		  <button type="button" onclick="document.getElementById('id_login').style.display='none'" class="cancelbtn">Скасувати</button>
+		  
+		  <span class="register"><a href = "#" onclick="document.getElementById('id_login').style.display='none' ; document.getElementById('id_register').style.display='block' " >Зареєструватись</a></span>
+		  
+		  <span class="password"><a href = "#" onclick = "myFoo()" >Забули пароль?</a></span>
+  
+		</div>
+	  </form>
+	</div>
+	<script src="script/authorization.js"></script>
+	
+	<script>
+	function myFoo() {
+	  alert("Ну я тут нічим не поможу")
+	}
+	</script>
+	
+	 <!-- Модальне вікно меню -->
+<div id="menuModal" class="modal" style="display:none;">
+  <form class="modal-content animate" id="authorization-form">
+    <div class="container">
+      <ul>
+        <li><a href="#" onclick="document.getElementById('basket').style.display='block'">Корзина</a></li>
+        <li><a href="#" onclick="alert('А може мені ще і css добавити?')">Налаштування</a></li>
+        <li><a href="" onclick="SessionClear()">Вийти</a></li>
+      </ul>
+    </div>
+    <button class="" onclick="document.getElementById('menuModal').style.display='block'">Закрити</button>
+  </form>
+</div>
+
+	
+	<!-- HTML-код для модального вікна -->
+<div id="addWindow" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Додати товар</h2>
+    <form id="myForm">
+      <div>
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="description">Опис:</label>
+        <textarea id="description" name="description" required></textarea>
+      </div>
+      <div>
+        <label for="price">Ціна:</label>
+        <input type="number" id="price" name="price" required>
+      </div>
+      <div>
+        <label for="image">Зображення:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+      </div>
+      <div>
+        <button type="submit">Зберегти</button>
+        <button type="button" onclick="closeWindow()">Скасувати</button>
+      </div>
+    </form>
+  </div>
+</div>
+<script src="script/addproduct.js"></script>
+<script>
+  function closeWindow() {
+    document.getElementById("addWindow").style.display = "none";
+  }
+</script>
+
+
+<div id="basket" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Корзина</h2>
+    <ul id="cart-items"></ul>
+    <button id="checkout-btn">Оформити замовлення</button>
+  </div>
+</div>
+  
+  </body>
+  
+  
+  
+  
+  
+  
+</html>
